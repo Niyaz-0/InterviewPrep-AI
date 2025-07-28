@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-import Login from "./pages/Auth/Login";
-import Signup from "./pages/Auth/Signup"
 import Dashboard from "./pages/Home/Dashboard"
 import InterviewPrep from "./pages/InterviewPrepPage/InterviewPrep"
 import LandingPage from "./pages/LandingPage"
