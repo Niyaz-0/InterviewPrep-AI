@@ -15,8 +15,8 @@ export default function Login({ setCurrentPage }) {
 
   return (
     <div className="w-[90vw] md:w-[33vw] p-7 flex flex-col justify-center">
-      <h3 className="text-xl font-semibold ☐ text-black">Welcome Back</h3>
-      <p className="text-base ☐ text-slate-700 mt-[5px] mb-6">
+      <h3 className="text-3xl font-semibold ☐ text-black">Welcome Back</h3>
+      <p className="text-lg ☐ text-slate-700 mt-[5px] mb-6">
         Please enter your details to log in
       </p>
       <form onSubmit={handleLogin}>
@@ -34,6 +34,22 @@ export default function Login({ setCurrentPage }) {
           placeholder="Min 8 Characters"
           type="password"
         />
+
+        {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+        <button type="submit" className="btn-primary">
+          LOGIN
+        </button>
+        <p className="text-lg text-slate-800 mt-3 font-medium">
+          Don't have an account?{""}
+          <button
+            className="font-bold text-primary underline cursor-pointer"
+            onClick={() => {
+              setCurrentPage("signup");
+            }}
+          >
+            SignUp
+          </button>
+        </p>
       </form>
     </div>
   );

@@ -10,28 +10,33 @@ export default function Input({ value, onChange, label, placeholder, type }) {
 
   return (
     <div className="flex flex-col gap-1">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="text-xl font-medium text-slate-800">{label}</label>
       <div className="input-box">
         <input
           type={
             type === "password" ? (showPassword ? "text" : "password") : type
           }
           placeholder={placeholder}
-          className="w-full bg-transparent outline-none"
+          className="w-full bg-transparent outline-none text-lg"
           value={value}
           onChange={onChange}
         />
         {type === "password" && (
-          <div
-            onClick={togglePassword}
-            className="cursor-pointer text-gray-500"
-          >
+          <>
             {showPassword ? (
-              <FaRegEye size={20} />
+              <FaRegEye
+                size={22}
+                onClick={() => togglePassword()}
+                className="text-primary cursor-pointer"
+              />
             ) : (
-              <FaRegEyeSlash size={20} />
+              <FaRegEyeSlash
+                size={20}
+                onClick={() => togglePassword()}
+                className="text-slate-400 cursor-pointer"
+              />
             )}
-          </div>
+          </>
         )}
       </div>
     </div>

@@ -6,7 +6,10 @@ export default function Modal({
   title,
   onClose,
   hideHeader,
-}) {
+}){
+
+  if(!isOpen) return null;
+
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black/40">
       {/* Modal Content */}
@@ -33,7 +36,7 @@ export default function Modal({
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              d="M1 1l6 6m0 0l6 6M7 7l-6 6m6-6L1 1"
+              d="m1 1 12 12M13 1 1 13"
             />
           </svg>
         </button>
