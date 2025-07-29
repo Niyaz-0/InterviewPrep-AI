@@ -16,7 +16,7 @@ export default function Login({ setCurrentPage }) {
   return (
     <div className="w-[90vw] md:w-[33vw] p-7 flex flex-col justify-center">
       <h3 className="text-3xl font-semibold ☐ text-black">Welcome Back</h3>
-      <p className="text-lg ☐ text-slate-700 mt-[5px] mb-6">
+      <p className="text-lg ☐ text-slate-700 mt-1.5 mb-6">
         Please enter your details to log in
       </p>
       <form onSubmit={handleLogin}>
@@ -35,12 +35,12 @@ export default function Login({ setCurrentPage }) {
           type="password"
         />
 
-        {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+        {error && <p className="text-red-500 text-base pb-2.5">{error}</p>}
         <button type="submit" className="btn-primary">
           LOGIN
         </button>
         <p className="text-lg text-slate-800 mt-3 font-medium">
-          Don't have an account?{""}
+          Don't have an account?{" "}
           <button
             className="font-bold text-primary underline cursor-pointer"
             onClick={() => {

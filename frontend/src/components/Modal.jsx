@@ -25,7 +25,7 @@ export default function Modal({
         )}
         <button type="button" className="text-gray-400 bg-transparent hover:bg-orange-100 hover:text-shadow-gray-900 rounded-lg text-sm w-8 h-8 flex items-center justify-center absolute top-3.5 right-3.5 cursor-pointer" onClick={onClose}>
           <svg
-            className="w-3 h-3"
+            className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
