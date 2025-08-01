@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Inputs/Input";
+import ProfilePhotoSelector from "../../components/Inputs/ProfilePhotoSelector";
 
 export default function Signup({ setCurrentPage }) {
   const [profilePic, setProfilePic] = useState(null);
@@ -17,10 +18,13 @@ export default function Signup({ setCurrentPage }) {
   };
 
   return (
-    <div className="w-[90vw] md:w-[33vw] p-7 flex flex-col justify-center">
+    <div className="w-[90vw] md:w-[55vw] lg:w-[38vw] p-7 flex flex-col justify-center">
       <h3 className="text-3xl font-semibold text-black">Create an Account</h3>
       <p className="text-lg text-slate-700 mt-1.5 mb-6">Join us today by entering your details below.</p>
       <form onSubmit={handleSignUp}>
+
+        <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
+
         <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
           <Input
             value={fullName}
